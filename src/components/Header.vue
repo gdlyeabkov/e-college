@@ -69,37 +69,37 @@
         
         <div style="display: flex; align-items: center; justify-content: center; background-color: rgb(235, 235, 235); height: 100px; width: 100%;">
             <div style="display: flex; height: 75%; width: 100%; font-variant: small-caps; font-size: 20px; color: rgb(0, 0, 200);">
-                <div @mouseenter="hoverEffect($event, false, 'details')" ref="detailsDialog" @mouseleave="hoverEffect($event, true, 'details', 'menu')" style="display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'Details' })" @mouseenter="hoverEffect($event, false, 'details')" ref="detailsDialog" @mouseleave="hoverEffect($event, true, 'details', 'menu')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
                     <span>
                         сведения об организации
                     </span>
                 </div>
-                <div @mouseenter="hoverEffect($event, false, 'mck')" ref="mckDialog" @mouseleave="hoverEffect($event, true, 'mck', 'menu')" style="display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'MCK' })" @mouseenter="hoverEffect($event, false, 'mck')" ref="mckDialog" @mouseleave="hoverEffect($event, true, 'mck', 'menu')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
                     <span>
                         мцк
                     </span>
                 </div>
-                <div @mouseenter="hoverEffect($event, false, 'entrant')" ref="entrantDialog" @mouseleave="hoverEffect($event, true, 'entrant', 'menu')" style="display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'Entrant' })" @mouseenter="hoverEffect($event, false, 'entrant')" ref="entrantDialog" @mouseleave="hoverEffect($event, true, 'entrant', 'menu')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
                     <span>
                         абитуриенту
                     </span>
                 </div>
-                <div @mouseenter="hoverEffect($event, false, 'student')" ref="studentDialog" @mouseleave="hoverEffect($event, true, 'student', 'menu')" style="display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'Student' })" @mouseenter="hoverEffect($event, false, 'student')" ref="studentDialog" @mouseleave="hoverEffect($event, true, 'student', 'menu')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
                     <span>
                         студенту
                     </span>
                 </div>
-                <div @mouseenter="hoverEffect($event, false, 'teacher')" ref="teacherDialog"  @mouseleave="hoverEffect($event, true, 'teacher', 'menu')" style="display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'Teacher' })" @mouseenter="hoverEffect($event, false, 'teacher')" ref="teacherDialog"  @mouseleave="hoverEffect($event, true, 'teacher', 'menu')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
                     <span>
                         педагогу
                     </span>
                 </div>
-                <div @mouseenter="hoverEffect($event, false, 'contacts')" ref="contactsDialog" @mouseleave="hoverEffect($event, true, 'contacts')" style="display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'Contacts' })" @mouseenter="hoverEffect($event, false, 'contacts')" ref="contactsDialog" @mouseleave="hoverEffect($event, true, 'contacts')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; border-right: 1px solid rgb(0, 0, 200); width: calc(100% / 7); height: 100%;">
                     <span>
                         контакты
                     </span>
                 </div>
-                <div  @mouseenter="hoverEffect($event, false, 'feedback')" ref="feedbackDialog" @mouseleave="hoverEffect($event, true, 'feedback')" style="display: flex; text-align: center; align-items: center; justify-content: center; width: calc(100% / 7); height: 100%;">
+                <div @click="$router.push({ name: 'Feedback' })"  @mouseenter="hoverEffect($event, false, 'feedback')" ref="feedbackDialog" @mouseleave="hoverEffect($event, true, 'feedback')" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; width: calc(100% / 7); height: 100%;">
                     <span>
                         обратная связь
                     </span>

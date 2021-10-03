@@ -38,24 +38,6 @@ mongoose.connect(url, connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
-const StudentSchema = new mongoose.Schema({
-    content: String,
-    
-}, { collection : 'myposts' });
-
-const StudentModel = mongoose.model('PostModel', PostSchema);
-
-app.get('/students/get', (req, res)=>{
-        
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
-    
-    return res.json({ status: "OK" })
-
-})
-
 
 app.get('**', (req, res) => { 
     res.setHeader('Access-Control-Allow-Origin', '*');

@@ -3,18 +3,304 @@
     <div style="width: 90%; margin: auto;">
       <Header />
       <div style="height: 250px; display: flex;">
-        <div style="display: flex; align-items: center; color: rgb(255, 255, 255); height: 100%; width: 50%; background-color: rgb(0, 0, 145);">
-          <span style="align-self: center; font-size: 72px;" class="material-icons">
-            settings
+        <div ref="poster" style="background-image: url('data:image/png;base64,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'); background-size: cover; height: 100%; width: 100%">
+          <div style="align-items: center; display: flex; margin-top: 35px; margin-left: 35px; width: 35%; height: 115px; background-color: rgb(255, 255, 255);">
+            <span style="align-self: center; font-size: 54px;" class="material-icons">
+              settings
+            </span>
+            <p style="margin-left: 15px; font-size: 24px;">
+              Межрегиональный центр компетенций
+              <button class="btn btn-primary">
+                строительство
+              </button>
+            </p>
+          </div>
+          <div style="margin-left: 35px; margin-top: 15px; width: 50%; display: flex; justify-content: space-around;">
+            <button @click="" class="btn btn-primary">
+              МЦПК
+            </button>
+            <button @click="" class="btn btn-primary">
+              Путёвка в жизнь
+            </button>
+            <button @click="" class="btn btn-primary">
+              ЗЭМ-1
+            </button>
+            <button @click="" class="btn btn-primary">
+              Ассоциация "НОСТРОЙ"
+            </button>
+            <button @click="" class="btn btn-primary">
+              НОВОСТИ
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      <div style="height: 275px;">
+        <div style="display: flex; height: 100%; justify-content: space-between; align-items: center;">
+          <span style="position: relative; z-index: 10; width: 45px; height: 45px;" class="btn btn-light material-icons-outlined">
+            chevron_left
           </span>
-          <span style="margin-left: 35px; align-self: center; font-variant: small-caps; font-size: 54px;" class="material-icons">
-            педагогу
+          <div style="height: 100%; flex-direction: row; width: 15%; display: flex; justify-content: space-around; align-items: center;">
+            <div style="margin: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="175px" src="https://www.tspk-mo.ru/storage/app/media/2021/raspisanie-1536x864.jpg" alt="" />
+              <span>
+                Электронный журнал школьный портал МО
+              </span>
+            </div>
+
+            <div style="margin: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="175px" src="https://www.tspk-mo.ru/storage/app/media/uploaded-files/nazvaniya-2001%20(2).jpeg" alt="" />
+              <span>
+                Федеральный проект новые возможности для каждого
+              </span>
+            </div>
+              
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="150px" src="https://www.tspk-mo.ru/storage/app/media/uploaded-files/na-sait001.jpeg" alt="" />
+              <span>
+                Федеральный проект Содействие занятости
+              </span>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="150px" src="https://www.tspk-mo.ru/storage/app/media/2020/zastavka001.jpeg" alt="" />
+              <span>
+                Выпускнику
+              </span>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="125px" src="https://www.tspk-mo.ru/storage/app/media/2021/510-510.jpg" alt="" />
+              <span>
+                Большая перемена
+              </span>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="150px" src="https://www.tspk-mo.ru/storage/app/media/2020/obuchenie003.jpeg" alt="" />
+              <span>
+                Дистанционное обучение
+              </span>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+              <img width="75px" src="https://www.tspk-mo.ru/storage/app/media/2021/2print-min-1%20(1).jpg" alt="" />
+              <span>
+                COVID-19
+              </span>
+            </div>
+
+          </div>
+          <span  style="width: 45px; height: 45px;" class="btn btn-light material-icons-outlined">
+            chevron_right
           </span>
         </div>
-        <div ref="poster" style="background-image: url('data:image/png;base64,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'); background-size: cover; height: 100%; width: 50%">
+    
+      </div>
+      
+      <div style="display: flex; justify-content: space-around;">
+        <img width="175px" src="https://tspk-mo.ru/themes/mck/assets/images/director.jpg" alt="">
+        <p style="margin-left: 45px;">    
+          <span style="font-weight: bolder;">
+            Приветствуем Вас на официальном сайте ГАПОУ МО «МЦК — Техникум имени С.П. Королева»
+          </span>
           
+          Техникум имени С.П. Королева – с 2016 г. Межрегиональный центр компетенций в области строительства – призван обеспечить подготовку специалистов в соответствии с мировыми стандартами отрасли и передовыми производственными технологиями.
+
+          Деятельность МЦК является частью общегосударственной программы по модернизации профессионального образования и повышению престижа рабочих и инженерных профессий среди молодежи.
+          <span style="float: right; margin-top: 25px; font-weight: bolder;">
+            Директор Ласкина Ираида Анатольевна
+          </span>
+        </p>
+      </div>
+
+      <div>
+        <h5>
+          НОВОСТИ
+        </h5>
+        <div style="display: flex; justify-content: space-around;">
+          <div style="width: 25%; margin: 10px;">
+            <img src="https://tspk-mo.ru/storage/app/media/uploaded-files/2909-lesnoe-mnogobore002.jpeg" width="275px" alt="">
+            <p>
+              29.09.2021
+            </p>
+            <h6>
+              Лесное многоборье
+            </h6>
+          </div>
+
+          <div style="width: 25%; margin: 10px;">
+            <img src="https://tspk-mo.ru/storage/app/media/uploaded-files/2209-vpr002.jpeg" width="275px" alt="">
+            <p>
+              29.09.2021
+            </p>
+            <h6>
+              Превокурсники написали всероссийские проверочные работы
+            </h6>
+          </div>
+
+          <div style="width: 25%; margin: 10px;">
+            <img src="https://tspk-mo.ru/storage/app/media/uploaded-files/1909-vpr001.jpeg" width="275px" alt="">
+            <p>
+              29.09.2021
+            </p>
+            <h6>
+              Для студентов СПО
+            </h6>
+          </div>
+
         </div>
       </div>
+
+      <div style="margin-top: 75px;">
+        <h5 style="text-align: center; color: rgb(0, 0, 255);">
+          ПРОЕКТЫ
+        </h5>
+        <div>
+          <div style="display: flex; justify-content: space-around;">
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/2021/chernyy.png" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Национальный проект образование
+              </button>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/2020/elearning.png" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Цифровой колледж Подмосковья
+              </button>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/proekt2018/putevka-v-zhizn.png" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Путёвка в жизнь
+              </button>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/proekt2018/%20(1).png" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Региональный центр компетенций(РНК)
+              </button>
+            </div>
+          </div>
+          <div style="margin-top: 25px; display: flex; justify-content: space-around;">
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/proekt2018/konkurs.png" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Конкурсы и олимпиады
+              </button>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/proekt2018/%20(2).png" width="100px" alt="">
+              <button class="btn btn-primary" style="height: 100px;" >
+                Многофункциональный центр прикладных квалификаций
+              </button>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/2021/les2021.jpeg" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Лесное многоборье
+              </button>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 175px;">
+              <img src="https://www.tspk-mo.ru/storage/app/media/2020/global-technical-support.png" width="100px" alt="">
+              <button style="height: 100px;" class="btn btn-primary">
+                Отзывы об организации
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 50px;">
+        <h5 style="text-align: center;">
+          Наши партнёры
+        </h5>
+        <div style="height: 275px;">
+          <div style="display: flex; height: 100%; justify-content: space-between; align-items: center;">
+            <span style="width: 45px; height: 45px;" class="btn btn-light material-icons-outlined">
+              chevron_left
+            </span>
+            <div style="height: 100%; flex-direction: row; width: 15%; display: flex; justify-content: space-around; align-items: center;">
+              <div style="margin: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="175px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-knauf.jpg" alt="" />
+                <span>
+                  ООО КНАУФ ГИБС
+                </span>
+              </div>
+
+              <div style="margin: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="175px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-energy.jpg" alt="" />
+                <span>
+                  Энергия
+                </span>
+              </div>
+                
+              <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="150px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-premier.png" alt="" />
+                <span>
+                  Инвестицинно-строительная компания Премьер
+                </span>
+              </div>
+
+              <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="150px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-tactical-missiles.png" alt="" />
+                <span>
+                  ОАО Корпорация Тактическое Ракетное Вооружение
+                </span>
+              </div>
+
+              <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="125px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-npo-it.png" alt="" />
+                <span>
+                  Научно-произдственнное объединение иззмерительной техники
+                </span>
+              </div>
+
+              <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="150px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-building.png" alt="" />
+                <span>
+                  ООО СтройРегистр
+                </span>
+              </div>
+
+              <div style="text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; padding: 15px; background-color: rgb(255, 255, 255); height: 85%; border: 1px solid rgb(0, 0, 200);">
+                <img width="75px" src="https://tspk-mo.ru/themes/mck/assets/images/logo-experimental-plant.png" alt="" />
+                <span>
+                  ООО Завод Экспериментального Машиностроения
+                </span>
+              </div>
+
+            </div>
+            <span  style="width: 45px; height: 45px;" class="btn btn-light material-icons-outlined">
+              chevron_right
+            </span>
+          </div>
+      
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 50px;">
+        <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQuHb56208v3YJKT4QNoYDP9rBL4Px9uXle4rzDDKfogdHEOCWYcaulHJl6lgSBdYxneXaHDc1OPHyN28B_Mbo" width="450px" alt="">
+        <p>
+          Сообщить о проблеме
+          Сообщение. Пилотный проект. Данная форма не предназначена для приема обращений граждан в порядке Федерального закона от 02.05.2006 № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации» и предоставляет возможность направить электронное сообщение в рамках реализации пилотного проекта по внедрению «Единого окна цифровой обратной связи». Ответ на сообщение будет направлен не позднее 8 рабочих дней после дня его регистрации, а по отдельным тематикам – в укороченные сроки.
+        </p>
+      </div>
+
+      <div>
+        
+      </div>
+
+      <div >
+        <h5 style="text-align: center;">
+          СТРУКТУРНЫЕ ПОДРАЗДЕЛЕНИЯ
+        </h5>
+        <div style="width: 100%; height: 235px; background-color: rgb(5, 215, 215);">
+
+        </div>
+      </div>
+
       <Footer />
     </div>
   </div>
