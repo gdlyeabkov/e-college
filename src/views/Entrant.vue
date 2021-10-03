@@ -16,131 +16,160 @@
         </div>
       </div>
 
-        <div style="background-color: rgb(255, 255, 255); box-sizing: border-box; padding: 25px;">
-          <p style="color: rgb(175, 175, 175);">
-            Главная&nbsp;/&nbsp;Контакты
-          </p>
-          <p style="font-size: 24px;">
-            Контакты
-          </p>
-          <div style="display: flex; display: flex; justify-content: center;">
-            <div style="width: 750px; height: 500px; background-color: rgb(245, 245, 245);">
+        <div style="display: flex; background-color: rgb(250, 250, 250);">
+          
+          <div style="box-sizing: border-box; padding: 0px 50px; width: 30%; display: flex; flex-direction: column; align-items: flex-start;">
+            
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Приемная комиссия') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Приемная комиссия'">
+              Приемная комиссия
+            </span>
 
-            </div>
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Дни открытых дверей') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Дни открытых дверей'">
+              Дни открытых дверей
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Контрольные цифры приема на 2021-2022') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Контрольные цифры приема на 2021-2022'">
+              Контрольные цифры приема на 2021-2022
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Правила приема') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Правила приема'">
+              Правила приема
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Вступительные испытания') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Вступительные испытания'">
+              Вступительные испытания
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Документы для поступления') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Документы для поступления'">
+              Документы для поступления
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Заочное отделение') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Заочное отделение'">
+              Заочное отделение
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Рейтинг абитуриентов 2021 - 2022') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Рейтинг абитуриентов 2021 - 2022'">
+              Рейтинг абитуриентов 2021 - 2022
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Приказы о зачислении') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Приказы о зачислении'">
+              Приказы о зачислении
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Электронная форма подачи заявления на поступление') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Электронная форма подачи заявления на поступление'">
+              Электронная форма подачи заявления на поступление
+            </span>
+            
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Прейскурант платных образовательных услуг') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Прейскурант платных образовательных услуг'">
+              Прейскурант платных образовательных услуг
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Вакантные места для приема (перевода)') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Вакантные места для приема (перевода)'">
+              Вакантные места для приема (перевода)
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Общежитие') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Общежитие'">
+              Общежитие
+            </span>
+            
           </div>
-
+          
           <div>
-            
-            <div style="display: flex; justify-content: space-between;">
-              
-              <div style="height: 125px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <p>
-                  Структурные подразделения (СП) образовательной организации:
-                </p>
-              </div>
-
-              <div style=" box-sizing: border-box; padding: 0px 10px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 125px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  Структурное подразделение №1: 141068, Московская область, г. Королев, мкр. 
-                  Текстильщик, ул. Молодежная, д.7
-                </span>
-                <span>
-                  Структурное подразделение №2: 141071, Московская область, г. Королев, Болшевское шоссе, д.2
-                </span>
-                <span>
-                  Структурное подразделение №3: 141281, Московская область, г. Ивантеевка, ул. Заречная, д.3
-                </span>
-                <span>
-                  Структурное подразделение №4: 141260, Московская область, Пушкинский район, рп Правдинский, ул. Студенческая, д.6
-                </span>
-                <span>
-                  Структурное подразделение №5: 141206, Московская область, г. Пушкино, ул.2-й Надсоновский проезд, д.3
-                </span>
-              </div>
-
+            <p style="color: rgb(175, 175, 175);">
+              Главная&nbsp;/&nbsp; Педагогу &nbsp;/&nbsp; {{ currentArticle }}
+            </p>
+            <p style="font-size: 24px;">
+              {{ currentArticle }}
+            </p>
+            <div style="" v-if="currentArticle.includes('Приемная комиссия')">
+              <p>
+                a
+              </p>
             </div>
-            
-            <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
-              
-              <div style="align-items: center; display: flex; height: 35px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <span>
-                  Руководитель
-                </span>
-              </div>
-
-              <div style="box-sizing: border-box; padding: 30px 15px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 35px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  Ласкина Ираида Анатольевна
-                </span>
-              </div>
-
+            <div style="" v-else-if="currentArticle.includes('Дни открытых дверей')">
+              <p>
+                b
+              </p>
             </div>
-
-            <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
-              
-              <div style="align-items: center; display: flex; height: 35px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <span>
-                  Телефон, e-mail, сайт
-                </span>
-              </div>
-
-              <div style="box-sizing: border-box; padding: 30px 15px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 35px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  +7(495) 516-60-38
-                </span>
-                <span>
-                  mo_mcktechn@mosreg.ru
-                </span>
-                <span>
-                  tspk-mo.ru
-                </span>
-              </div>
-
+            <div style="" v-else-if="currentArticle.includes('Контрольные цифры приема на 2021-2022')">
+              <p>
+                c
+              </p>
             </div>
-
-            <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
-              
-              <div style="align-items: center; display: flex; height: 35px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <span>
-                  Режим и график работы
-                </span>
-              </div>
-
-              <div style="box-sizing: border-box; padding: 30px 15px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 35px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  Понедельник–пятница – с 8:30 до 18:00
-                </span>
-                <span>
-                  Суббота, воскресенье – выходные дни
-                </span>
-              </div>
-
+            <div style="" v-else-if="currentArticle.includes('Правила приема')">
+              <p>
+                d
+              </p>
             </div>
-
-          </div>
-
-          <div style="display: flex; display: flex; justify-content: center;">
-            
-            <div style="width: 250px; height: 200px; background-color: rgb(235, 235, 235); display: flex; justify-content: center; align-items: center;">
-              <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <span class="material-icons" style="color: rgb(0, 0, 255); font-size: 84px;">
-                  directions_car
-                </span>
-                <p style="width: 150px; text-align: center;">
-                  Схема проезда на автомобиле
-                </p>
-              </div>
+            <div style="" v-else-if="currentArticle.includes('Вступительные испытания')">
+              <p>
+                e
+              </p>
             </div>
-
-            <div style=" margin-left: 100px; width: 250px; height: 200px; background-color: rgb(235, 235, 235); display: flex; justify-content: center; align-items: center;">
-              <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <span class="material-icons" style="color: rgb(0, 0, 255); font-size: 84px;">
-                  location_on
-                </span>
-                <p style="width: 150px; text-align: center;">
-                  Схема пешеходного маршрута
-                </p>
-              </div>
+            <div style="" v-else-if="currentArticle.includes('Документы для поступления')">
+              <p>
+                f
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Заочное отделение')">
+              <p>
+                g
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Рейтинг абитуриентов 2021 - 2022')">
+              <p>
+                h
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Приказы о зачислении')">
+              <p>
+                i
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Электронная форма подачи заявления на поступление')">
+              <p>
+                j
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Прейскурант платных образовательных услуг')">
+              <p>
+                k
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Вакантные места для приема (перевода)')">
+              <p>
+                l
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Общежитие')">
+              <p>
+                m
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Студенческое самоуправление')">
+              <p>
+                n
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Документация для студентов')">
+              <p>
+                o
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Воспитательная деятельность')">
+              <p>
+                p
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Для родителей')">
+              <p>
+                r
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('О переводе, восстановлении и отчислении студентов')">
+              <p>
+                s
+              </p>
             </div>
 
           </div>
@@ -157,13 +186,15 @@ import Header from "@/components/Header.vue"
 import Footer from "@/components/Footer.vue"
 
 export default {
-  name: 'Home',
+  name: 'Student',
   data(){
     return {
       cursorOfPoster: -1,
+      currentArticle: "Приемная комиссия"
     }
   },
   mounted(){
+    
     setInterval(() => {
       this.cursorOfPoster += 1
       if(this.cursorOfPoster === 2){
@@ -179,6 +210,10 @@ export default {
       }
       
     }, 5000)
+
+    if(this.$route.query.article.lenght >= 1) {
+      this.currentArticle = this.$route.query.article
+    }
   },
   components: {
     Header,

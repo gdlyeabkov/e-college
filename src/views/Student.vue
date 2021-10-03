@@ -16,131 +16,180 @@
         </div>
       </div>
 
-        <div style="background-color: rgb(255, 255, 255); box-sizing: border-box; padding: 25px;">
-          <p style="color: rgb(175, 175, 175);">
-            Главная&nbsp;/&nbsp;Контакты
-          </p>
-          <p style="font-size: 24px;">
-            Контакты
-          </p>
-          <div style="display: flex; display: flex; justify-content: center;">
-            <div style="width: 750px; height: 500px; background-color: rgb(245, 245, 245);">
+        <div style="display: flex; background-color: rgb(250, 250, 250);">
+          
+          <div style="box-sizing: border-box; padding: 0px 50px; width: 30%; display: flex; flex-direction: column; align-items: flex-start;">
+            
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Расписание занятий') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Расписание занятий'">
+              Расписание занятий
+            </span>
 
-            </div>
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Расписание экзаменов') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Расписание экзаменов'">
+              Расписание экзаменов
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Заочное отделение') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Заочное отделение'">
+              Заочное отделение
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Дополнительное образование (кружки, секции)') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Дополнительное образование (кружки, секции)'">
+              Дополнительное образование (кружки, секции)
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Библиотека') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Библиотека'">
+              Библиотека
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Полезные ссылки') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Полезные ссылки'">
+              Полезные ссылки
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Онлайн заявки, опросы для сотрудников') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Онлайн заявки, опросы для сотрудников'">
+              Онлайн заявки, опросы для сотрудников
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Социально-психологическая служба') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Социально-психологическая служба'">
+              Социально-психологическая служба
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Служба содействия трудоустройства') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Служба содействия трудоустройства'">
+              Служба содействия трудоустройства
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Телефон доверия') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Телефон доверия'">
+              Телефон доверия
+            </span>
+            
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Конкурсы и олимпиады') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Конкурсы и олимпиады'">
+              Конкурсы и олимпиады
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('WorldSkills') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'WorldSkills'">
+              WorldSkills
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Стипендии и другие виды материальной поддержки') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Стипендии и другие виды материальной поддержки'">
+              Стипендии и другие виды материальной поддержки
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Студенческое самоуправление') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Студенческое самоуправление'">
+              Студенческое самоуправление
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Документация для студентов') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Документация для студентов'">
+              Документация для студентов
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Воспитательная деятельность') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Воспитательная деятельность'">
+              Воспитательная деятельность
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('Для родителей') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'Для родителей'">
+              Для родителей
+            </span>
+
+            <span :style="`margin: 15px 0px; cursor: pointer; font-weight: bolder; color: ${currentArticle.includes('О переводе, восстановлении и отчислении студентов') ? 'rgb(0, 0, 255);' : 'rgb(0, 0, 175);' }`" @click="currentArticle = 'О переводе, восстановлении и отчислении студентов'">
+              О переводе, восстановлении и отчислении студентов
+            </span>
+
           </div>
-
+          
           <div>
-            
-            <div style="display: flex; justify-content: space-between;">
-              
-              <div style="height: 125px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <p>
-                  Структурные подразделения (СП) образовательной организации:
-                </p>
-              </div>
-
-              <div style=" box-sizing: border-box; padding: 0px 10px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 125px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  Структурное подразделение №1: 141068, Московская область, г. Королев, мкр. 
-                  Текстильщик, ул. Молодежная, д.7
-                </span>
-                <span>
-                  Структурное подразделение №2: 141071, Московская область, г. Королев, Болшевское шоссе, д.2
-                </span>
-                <span>
-                  Структурное подразделение №3: 141281, Московская область, г. Ивантеевка, ул. Заречная, д.3
-                </span>
-                <span>
-                  Структурное подразделение №4: 141260, Московская область, Пушкинский район, рп Правдинский, ул. Студенческая, д.6
-                </span>
-                <span>
-                  Структурное подразделение №5: 141206, Московская область, г. Пушкино, ул.2-й Надсоновский проезд, д.3
-                </span>
-              </div>
-
+            <p style="color: rgb(175, 175, 175);">
+              Главная&nbsp;/&nbsp; Педагогу &nbsp;/&nbsp; {{ currentArticle }}
+            </p>
+            <p style="font-size: 24px;">
+              {{ currentArticle }}
+            </p>
+            <div style="" v-if="currentArticle.includes('Расписание занятий')">
+              <p>
+                a
+              </p>
             </div>
-            
-            <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
-              
-              <div style="align-items: center; display: flex; height: 35px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <span>
-                  Руководитель
-                </span>
-              </div>
-
-              <div style="box-sizing: border-box; padding: 30px 15px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 35px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  Ласкина Ираида Анатольевна
-                </span>
-              </div>
-
+            <div style="" v-else-if="currentArticle.includes('Расписание экзаменов')">
+              <p>
+                b
+              </p>
             </div>
-
-            <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
-              
-              <div style="align-items: center; display: flex; height: 35px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <span>
-                  Телефон, e-mail, сайт
-                </span>
-              </div>
-
-              <div style="box-sizing: border-box; padding: 30px 15px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 35px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  +7(495) 516-60-38
-                </span>
-                <span>
-                  mo_mcktechn@mosreg.ru
-                </span>
-                <span>
-                  tspk-mo.ru
-                </span>
-              </div>
-
+            <div style="" v-else-if="currentArticle.includes('Заочное отделение')">
+              <p>
+                c
+              </p>
             </div>
-
-            <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
-              
-              <div style="align-items: center; display: flex; height: 35px; box-sizing: border-box; padding: 30px 15px; color: rgb(255, 255, 255); background-color: rgb(0, 150, 255); width: 40%;">
-                <span>
-                  Режим и график работы
-                </span>
-              </div>
-
-              <div style="box-sizing: border-box; padding: 30px 15px; font-size: 10px; flex-direction: column; justify-content: center; display: flex; height: 35px; color: rgb(125, 125, 125); background-color: rgb(235, 235, 235); width: 59.5%;">
-                <span>
-                  Понедельник–пятница – с 8:30 до 18:00
-                </span>
-                <span>
-                  Суббота, воскресенье – выходные дни
-                </span>
-              </div>
-
+            <div style="" v-else-if="currentArticle.includes('Дополнительное образование (кружки, секции)')">
+              <p>
+                d
+              </p>
             </div>
-
-          </div>
-
-          <div style="display: flex; display: flex; justify-content: center;">
-            
-            <div style="width: 250px; height: 200px; background-color: rgb(235, 235, 235); display: flex; justify-content: center; align-items: center;">
-              <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <span class="material-icons" style="color: rgb(0, 0, 255); font-size: 84px;">
-                  directions_car
-                </span>
-                <p style="width: 150px; text-align: center;">
-                  Схема проезда на автомобиле
-                </p>
-              </div>
+            <div style="" v-else-if="currentArticle.includes('Библиотека')">
+              <p>
+                e
+              </p>
             </div>
-
-            <div style=" margin-left: 100px; width: 250px; height: 200px; background-color: rgb(235, 235, 235); display: flex; justify-content: center; align-items: center;">
-              <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <span class="material-icons" style="color: rgb(0, 0, 255); font-size: 84px;">
-                  location_on
-                </span>
-                <p style="width: 150px; text-align: center;">
-                  Схема пешеходного маршрута
-                </p>
-              </div>
+            <div style="" v-else-if="currentArticle.includes('Полезные ссылки')">
+              <p>
+                f
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Онлайн заявки, опросы для сотрудников')">
+              <p>
+                g
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Социально-психологическая служба')">
+              <p>
+                h
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Служба содействия трудоустройства')">
+              <p>
+                i
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Телефон доверия')">
+              <p>
+                j
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Конкурсы и олимпиады')">
+              <p>
+                k
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('WorldSkills')">
+              <p>
+                l
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Стипендии и другие виды материальной поддержки')">
+              <p>
+                m
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Студенческое самоуправление')">
+              <p>
+                n
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Документация для студентов')">
+              <p>
+                o
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Воспитательная деятельность')">
+              <p>
+                p
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('Для родителей')">
+              <p>
+                r
+              </p>
+            </div>
+            <div style="" v-else-if="currentArticle.includes('О переводе, восстановлении и отчислении студентов')">
+              <p>
+                s
+              </p>
             </div>
 
           </div>
@@ -157,13 +206,15 @@ import Header from "@/components/Header.vue"
 import Footer from "@/components/Footer.vue"
 
 export default {
-  name: 'Home',
+  name: 'Student',
   data(){
     return {
       cursorOfPoster: -1,
+      currentArticle: "Расписание занятий"
     }
   },
   mounted(){
+    
     setInterval(() => {
       this.cursorOfPoster += 1
       if(this.cursorOfPoster === 2){
@@ -179,6 +230,10 @@ export default {
       }
       
     }, 5000)
+
+    if(this.$route.query.article.lenght >= 1) {
+      this.currentArticle = this.$route.query.article
+    }
   },
   components: {
     Header,
